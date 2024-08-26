@@ -89,6 +89,19 @@ body {
     border-radius: 8px;
     cursor: pointer;
     color: white;
+} 
+/* Estilo para el botón de compra */
+.btn-comprar {
+    background-color: #4CAF50; /* Color verde limón */
+    color: white; /* Color blanco para el texto */
+    padding: 10px 20px; /* Espacios entre el texto y los bordes del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Redondea los ángulos del botón */
+    cursor: pointer; /* Cambia el cursor a "puntero" al pasar sobre el botón */
+}
+
+.btn-comprar:hover {
+    background-color: #3e8e41; /* Color verde limón más oscuro en hover */
 }
 
 .card-top-right::before {
