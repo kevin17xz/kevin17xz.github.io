@@ -4,7 +4,7 @@ if (isset($_POST['confirmar_compra'])) {
 
     // Conectar a la base de datos
     $servername = "localhost"; $username = ""; $password = ""; $dbname = "tienda_ropa";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($this->servidor, $this->usuario_mysql, $this->clave_mysql, $this->basedatos_mysql);
 
     if ($conn->connect_error) {
         die("Error de conexión: " . $conn->connect_error);
