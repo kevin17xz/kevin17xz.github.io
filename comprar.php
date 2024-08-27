@@ -1,6 +1,6 @@
 <?php
 // Conectar a la base de datos
-$servername = "localhost"; $root = ""; $password = ""; $dbname = "tienda_ropa";
+$servername = "localhost"; $username = "root"; $password = ""; $dbname = "tienda_ropa";
 $conn =  new mysqli($this->servidor, $this->usuario_mysql, $this->clave_mysql, $this->basedatos_mysql);
 
 if ($conn->connect_error) {
