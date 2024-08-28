@@ -70,24 +70,6 @@
     <li><a href="#zapatos">Zapatos</a></li>
 </ul>
         </nav> 
-        <script>
-    // Enviar solicitud AJAX para guardar la compra
-    function comprar(producto_id, precio) {
-        const url = '/comprar.php'; // Actualiza esta ruta con la real de tu servidor web
-        const data = { producto_id: producto_id, precio: precio };
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then(() => {
-            console.log('Compra registrada exitosamente.');
-            alert("¡Registro Guardado! Gracias por tu compra.");
-        });
-    }
-</script>
 
        <!-- Secciones de productos -->
 <section id="pantalones-mujer">
@@ -97,8 +79,10 @@
         <img src="pantalon de mujer/pantalon1.jpeg" alt="Pantalón1">
         <h3>Marca: Guess Jeans</h3>
         <p>Precio: 530 LPS</p> 
-       <button onclick="location.href='comprar.php?producto=<?php echo $row['id']; ?>&precio=530';" class="btn btn-primary btn-comprar">Comprar</button>
-
+        <form method="POST" id="formulario-comprar-pantalon-1">
+        <input type="number" name="cantidad" min="1" max="10" value="1">
+        <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+    </form>
     <div class="producto">
         <img src="pantalon de mujer/pantalon2.jpeg" alt="Pantalón2">
         <h3>Marca: Magenda</h3>
@@ -395,7 +379,24 @@
         <img src="zapatos/img16.jpg" alt="Imagen 1">
         
         <p>Precio: 1900 LPS</p> 
-         <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=1900" class="btn btn-primary btn-comprar">Comprar</a>
+         <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=1900" class="btn btn-primary btn-comprar">Comprar</a> 
+         <script>
+    function comprar(producto_id, precio) {
+        const url = 'https://ejemplo.com/comprar.php'; // Actualiza esta ruta con la real de tu servidor web
+        const data = { producto_id: producto_id, precio: precio };
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(() => {
+            console.log('Compra registrada exitosamente.');
+            alert("¡Registro Guardado! Gracias por tu compra.");
+        });
+    }
+</script>
       </div>
 </section>
     </div> 
