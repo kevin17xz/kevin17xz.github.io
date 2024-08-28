@@ -71,28 +71,33 @@
 </ul>
         </nav> 
 
-       <!-- Secciones de productos -->
 <section id="pantalones-mujer">
     <h2>Pantalones de Mujer</h2>
 
     <div class="producto">
         <img src="pantalon de mujer/pantalon1.jpeg" alt="Pantalón1">
         <h3>Marca: Guess Jeans</h3>
-        <p>Precio: 530 LPS</p> 
-        <!-- Formulario de compra -->
-<form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-    <input type="hidden" name="productoId" value="1">
-    <input type="number" name="cantidad" min="1" max="10" value="1">
-    <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-</form>
-
-
+        <p>Precio: 530 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="1"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
+    
     <div class="producto">
         <img src="pantalon de mujer/pantalon2.jpeg" alt="Pantalón2">
         <h3>Marca: Magenda</h3>
         <p>Precio: 550 LPS</p>
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=550" class="btn btn-primary btn-comprar">Comprar</a>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="2"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
+
+
+
 
     <div class="producto">
         <img src="pantalon de mujer/pantalon3.jpeg" alt="Pantalón3">

@@ -5,53 +5,63 @@ $username = "root";
 $password = "1234567";
 $dbname = "tienda_ropa";
 
+// Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Verificar la conexión
 if ($conn->connect_error) {
     die("Falló la conexión a la base de datos: " . $conn->connect_error);
 }
 
-// Verifica si se realizó una solicitud POST
+// Verificar si la solicitud es POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtiene los datos enviados desde el formulario
+    // Obtener datos del formulario
     $productoId = $_POST['productoId'];
     $cantidad = $_POST['cantidad'];
 
-    // Consulta el producto en la base de datos
-    $sql = "SELECT * FROM productos WHERE id=?";
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("i", $productoId);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    // Verificar que los datos sean válidos
+    if ($productoId && $cantidad) {
+        // Consulta para obtener el producto
+        $sql = "SELECT * FROM productos WHERE id=?";
+        if ($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param("i", $productoId);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-        if ($row = $result->fetch_assoc()) {
-            $stockDisponible = $row['cantidad'];
-            if ($cantidad <= $stockDisponible) {
-                // Actualiza la base de datos con los detalles de compra
-                $sql = "INSERT INTO compras (nombre_producto, precio, cantidad, fecha_compra)
-                        VALUES (?, ?, ?, NOW())";
-                if ($stmt = $conn->prepare($sql)) {
-                    $stmt->bind_param("sdi", $row['nombre'], $row['precio'], $cantidad);
-                    $stmt->execute();
-
-                    // Muestra un mensaje de éxito al usuario
-                    echo "<p>¡Datos guardados! ¡GRACIAS POR SU COMPRA!</p>";
+            if ($row = $result->fetch_assoc()) {
+                // Verificar si hay suficiente stock disponible
+                if ($cantidad <= $row['cantidad']) {
+                    // Insertar detalles de la compra en la base de datos
+                    $sql = "INSERT INTO compras (nombre_producto, precio, cantidad, fecha_compra)
+                            VALUES (?, ?, ?, NOW())";
+                    if ($stmt = $conn->prepare($sql)) {
+                        $stmt->bind_param("sdi", $row['nombre'], $row['precio'], $cantidad);
+                        if ($stmt->execute()) {
+                            // Mensaje de éxito
+                            echo "<p>¡Datos guardados! ¡GRACIAS POR SU COMPRA!</p>";
+                        } else {
+                            echo "<p>Error al guardar la compra: " . $stmt->error . "</p>";
+                        }
+                    } else {
+                        echo "<p>Error en la preparación de la consulta: " . $conn->error . "</p>";
+                    }
                 } else {
-                    die("Falló la consulta: " . $conn->error);
+                    echo "<p>No hay suficiente stock disponible.</p>";
                 }
             } else {
-                // Muestra un mensaje si el producto no está disponible en la cantidad seleccionada
-                echo "<p>No tenemos suficientes unidades disponibles para esa cantidad.</p>";
+                echo "<p>Producto no encontrado.</p>";
             }
+
+            // Cerrar la declaración preparada
+            $stmt->close();
         } else {
-            echo "<p>Producto no encontrado.</p>";
+            echo "<p>Error en la preparación de la consulta: " . $conn->error . "</p>";
         }
     } else {
-        die("Falló la consulta: " . $conn->error);
+        echo "<p>Datos inválidos proporcionados.</p>";
     }
-
-    // Cierra las sentencias preparadas y la conexión a la base de datos
-    $stmt->close();
-    $conn->close();
 }
+
+// Cerrar la conexión a la base de datos
+$conn->close();
 ?>
