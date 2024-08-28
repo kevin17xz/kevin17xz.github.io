@@ -81,10 +81,11 @@
         <p>Precio: 530 LPS</p> 
         <!-- Formulario de compra -->
 <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-    <input type="hidden" name="productoId" value="1"> <!-- Asegúrate de que el valor sea el ID del producto -->
+    <input type="hidden" name="productoId" value="1">
     <input type="number" name="cantidad" min="1" max="10" value="1">
     <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
 </form>
+
 
     <div class="producto">
         <img src="pantalon de mujer/pantalon2.jpeg" alt="Pantalón2">
