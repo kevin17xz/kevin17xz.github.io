@@ -1,18 +1,15 @@
 <?php
-// Configuración de la base de datos
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "tienda_ropa";
+$dbname = "store_chic";
 
-// Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión
 if ($conn->connect_error) {
     die("Falló la conexión a la base de datos: " . $conn->connect_error);
 }
-
 // Verificar si la solicitud es POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Leer el cuerpo de la solicitud JSON

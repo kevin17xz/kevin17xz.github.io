@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STORE CHIC</title>
-    <link rel="stylesheet" href="estilos.css"> 
+    <title>STORE CHIC</title> 
+    
+    <link rel="stylesheet" href="estilos.css">  
+    
     <style>
         /* Estilo para ajustar el tamaño de las imágenes */
         .producto img {
@@ -38,6 +40,11 @@
     <div class="header">
         <img src="logo1.jpg" alt="Logo de STORE CHIC" class="logo">
         <div class="nombre-tienda">STORE CHIC</div>
+    </div> 
+     <div id="contenedor">
+        <?php require_once 'productos.php'; ?> <!-- Incluir aquí el archivo productos.php que muestra los productos -->
+        <a href="carrito.html" class="enlace-carrito">Ver carrito</a> 
+        <script src="carrito.js"></script> <!-- Enlazar a tu archivo JavaScript para mostrar y manejar el carrito -->
     </div>
 
     <!-- Aquí irían las otras secciones de tu tienda -->
