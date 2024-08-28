@@ -8,7 +8,51 @@
     <link rel="stylesheet" href="../carrito.css"> 
 </head>
 <body>
-    <!-- Código HTML proporcionado para mostrar el carrito de compras -->
-    ...
+    <div class="container">
+        <h2>Tu carrito de compras</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+
+        <!-- Sección de pago -->
+        <div class="payment-options">
+            <h3>Opciones de pago:</h3>
+            <p>Diversas formas de pago, incluyendo tarjetas de crédito y débito.</p>
+        </div>
+
+        <!-- Botones de compra y checkout -->
+        <div class="buttons">
+            <button class="buy-btn">Finalizar compra</button>
+            <a href="#" class="checkout-btn">Proceder al pago</a>
+        </div>
+
+        <!-- Sección de información de contacto -->
+        <h3>Información de contacto:</h3>
+        <form action="">
+            <label for="email">Storechic@gmail.com</label>
+            <input type="email" id="email">
+            <br>
+            <label for="telefono">504-5352-5245:</label>
+            <input type="tel" id="telefono">
+        </form>
+
+        <!-- Información de envío -->
+        <div class="shipping-info">
+            <h3>Información de envío:</h3>
+            <p>Su pedido llegara en 3 Dias...</p>
+        </div>
+
+    </div>
+
+    <script src="../carrito.js"></script> <!-- Enlazar a tu archivo JavaScript -->
 </body>
 </html>
