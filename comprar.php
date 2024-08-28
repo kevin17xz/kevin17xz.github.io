@@ -2,7 +2,7 @@
 // Configuración de la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "1234567";
+$password = "";
 $dbname = "tienda_ropa";
 
 // Crear conexión
