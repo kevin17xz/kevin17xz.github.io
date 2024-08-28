@@ -15,9 +15,13 @@ if ($conn->connect_error) {
 
 // Verificar si la solicitud es POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener datos del formulario
-    $productoId = $_POST['productoId'];
-    $cantidad = $_POST['cantidad'];
+    // Leer el cuerpo de la solicitud JSON
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
+
+    // Obtener los datos del JSON
+    $productoId = $data['producto_id'];
+    $cantidad = $data['cantidad'];
 
     // Verificar que los datos sean válidos
     if ($productoId && $cantidad) {
@@ -37,28 +41,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if ($stmt = $conn->prepare($sql)) {
                         $stmt->bind_param("sdi", $row['nombre'], $row['precio'], $cantidad);
                         if ($stmt->execute()) {
-                            // Mensaje de éxito
-                            echo "<p>¡Datos guardados! ¡GRACIAS POR SU COMPRA!</p>";
+                            // Respuesta de éxito en JSON
+                            echo json_encode(["message" => "¡Datos guardados! ¡GRACIAS POR SU COMPRA!"]);
                         } else {
-                            echo "<p>Error al guardar la compra: " . $stmt->error . "</p>";
+                            echo json_encode(["error" => "Error al guardar la compra: " . $stmt->error]);
                         }
                     } else {
-                        echo "<p>Error en la preparación de la consulta: " . $conn->error . "</p>";
+                        echo json_encode(["error" => "Error en la preparación de la consulta: " . $conn->error]);
                     }
                 } else {
-                    echo "<p>No hay suficiente stock disponible.</p>";
+                    echo json_encode(["error" => "No hay suficiente stock disponible."]);
                 }
             } else {
-                echo "<p>Producto no encontrado.</p>";
+                echo json_encode(["error" => "Producto no encontrado."]);
             }
 
             // Cerrar la declaración preparada
             $stmt->close();
         } else {
-            echo "<p>Error en la preparación de la consulta: " . $conn->error . "</p>";
+            echo json_encode(["error" => "Error en la preparación de la consulta: " . $conn->error]);
         }
     } else {
-        echo "<p>Datos inválidos proporcionados.</p>";
+        echo json_encode(["error" => "Datos inválidos proporcionados."]);
     }
 }
 
