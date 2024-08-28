@@ -96,124 +96,175 @@
         </form>
     </div>
 
-
-
-
     <div class="producto">
         <img src="pantalon de mujer/pantalon3.jpeg" alt="Pantalón3">
         <h3>Marca: CKlas</h3>
-        <p>Precio: 600 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=600" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 600 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="3"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
-
-   
 
     <div class="producto">
         <img src="pantalon de mujer/pantalon5.jpeg" alt="Pantalón5">
         <h3>Marca: ShiFan</h3>
-        <p>Precio: 550 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=550" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 550 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="5"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
 
 </section>
 
-
-        <section id="pantalones-hombre">
-            <h2>Pantalones de Hombre</h2>
-            <div class="seccion-productos">
-        <!-- Pantalón 1 -->
-        <div class="producto">
-            <img src="Pantalon de hombre/pantalon1.jpg" alt="Pantalón GUNS AND BLUES">
-            <h3>GUNS AND BLUES</h3>
-            <p>Precio: 600 LPS</p> 
-            <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=600" class="btn btn-primary btn-comprar">Comprar</a>
-        </div>
-
-        <!-- Pantalón 2 -->
-        <div class="producto">
-            <img src="Pantalon de hombre/pantalon2.jpg" alt="Pantalón INTERBIEW JEANS">
-            <h3>INTERBIEW JEANS</h3>
-            <p>Precio: 550 LPS</p> 
-            <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=550" class="btn btn-primary btn-comprar">Comprar</a>
-        </div>
+<section id="pantalones-hombre">
+    <h2>Pantalones de Hombre</h2>
+    <div class="producto">
+        <img src="Pantalon de hombre/pantalon1.jpg" alt="Pantalón GUNS AND BLUES">
+        <h3>GUNS AND BLUES</h3>
+        <p>Precio: 600 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="6"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
-        </section>
 
-       <section id="camisas-mujer">
-    <h2>Camisas de Mujer</h2> 
-           
+    <div class="producto">
+        <img src="Pantalon de hombre/pantalon2.jpg" alt="Pantalón INTERBIEW JEANS">
+        <h3>INTERBIEW JEANS</h3>
+        <p>Precio: 550 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="7"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
+</section>
+
+<section id="camisas-mujer">
+    <h2>Camisas de Mujer</h2>
 
     <div class="producto">
         <img src="camisa de mujer/blusa1.jpg" alt="Blusa1">
         <h3>Marca: Bella1010</h3>
-        <p>Precio: 480 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=480" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 480 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="8"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa2.jpg" alt="Blusa2">
         <h3>Marca: DYNE</h3>
-        <p>Precio: 450 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=450" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 450 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="9"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa3.jpg" alt="Blusa3">
         <h3>Marca: BLUSA</h3>
-        <p>Precio: 450 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=450" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 450 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="10"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa4.jpg" alt="Blusa4">
         <h3>Marca: Chic Mi</h3>
-        <p>Precio: 430 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=430" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 430 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="11"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa5.jpg" alt="Blusa5">
         <h3>Marca: BLUSA</h3>
-        <p>Precio: 380 LPS</p> 
-        <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=380" class="btn btn-primary btn-comprar">Comprar</a>
+        <p>Precio: 380 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="12"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
     </div>
 
 </section>
 
+<section id="camisas-hombre">
+    <h2>Camisas de Hombre</h2>
+    <div class="producto">
+        <img src="camisa de hombre/camisa1.jpg" alt="Camisa de Hombre">
+        <h3>Marca: LACOSTE</h3>
+        <p>Precio: 580 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="13"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
 
-        <section id="camisas-hombre">
-            <h2>Camisas de Hombre</h2>
-            <div class="producto">
-                <img src="camisa de hombre/camisa1.jpg" alt="Camisa de Hombre">
-                <h3>Marca: LACOSTE</h3>
-                <p>Precio: 580 LPS</p> 
-                <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=580" class="btn btn-primary btn-comprar">Comprar</a>
-            </div>
-            <div class="producto">
-                <img src="camisa de hombre/camisa2.jpg" alt="Camisa de Hombre">
-                <h3>Marca: Tommy</h3>
-                <p>Precio: 580 LPS</p> 
-                <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=580" class="btn btn-primary btn-comprar">Comprar</a>
-            </div>
-            <div class="producto">
-                <img src="camisa de hombre/camisa3.jpg" alt="Camisa de Hombre">
-                <h3>Marca: POLO</h3>
-                <p>Precio: 550 LPS</p> 
-                <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=550" class="btn btn-primary btn-comprar">Comprar</a>
-            </div>
-            <div class="producto">
-                <img src="camisa de hombre/camisa4.jpg" alt="Camisa de Hombre">
-                <h3>Marca: POLO</h3>
-                <p>Precio: 500 LPS</p> 
-                <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=500" class="btn btn-primary btn-comprar">Comprar</a>
-            </div>
-            <div class="producto">
-                <img src="camisa de hombre/camisa5.jpg" alt="Camisa de Hombre">
-                <h3>Marca: Tommy</h3>
-                <p>Precio: 520 LPS</p> 
-                <a href="/path/to/comprar.php?producto=<?php echo $row['id']; ?>&precio=530" class="btn btn-primary btn-comprar">Comprar</a>
-            </div>
-        </section> 
+    <div class="producto">
+        <img src="camisa de hombre/camisa2.jpg" alt="Camisa de Hombre">
+        <h3>Marca: Tommy</h3>
+        <p>Precio: 580 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="14"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
+
+    <div class="producto">
+        <img src="camisa de hombre/camisa3.jpg" alt="Camisa de Hombre">
+        <h3>Marca: POLO</h3>
+        <p>Precio: 550 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="15"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
+
+    <div class="producto">
+        <img src="camisa de hombre/camisa4.jpg" alt="Camisa de Hombre">
+        <h3>Marca: POLO</h3>
+        <p>Precio: 500 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="16"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
+
+    <div class="producto">
+        <img src="camisa de hombre/camisa5.jpg" alt="Camisa de Hombre">
+        <h3>Marca: Tommy</h3>
+        <p>Precio: 520 LPS</p>
+        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
+            <input type="hidden" name="productoId" value="17"> <!-- ID único del producto -->
+            <input type="number" name="cantidad" min="1" max="10" value="1">
+            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        </form>
+    </div>
+
+</section>
+
+           
         
   
         
