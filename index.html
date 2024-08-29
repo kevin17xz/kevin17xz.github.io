@@ -85,44 +85,31 @@
         <img src="pantalon de mujer/pantalon1.jpeg" alt="Pantalón1">
         <h3>Marca: Guess Jeans</h3>
         <p>Precio: 530 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="1"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+         <button onclick="addToCart(13, 'Guess Jeans', 530)">Agregar al carrito</button>
     </div>
-    
+
     <div class="producto">
         <img src="pantalon de mujer/pantalon2.jpeg" alt="Pantalón2">
         <h3>Marca: Magenda</h3>
         <p>Precio: 550 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="2"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+        <button onclick="addToCart(14, 'Magenda', 550)">Agregar al carrito</button>
     </div>
 
     <div class="producto">
         <img src="pantalon de mujer/pantalon3.jpeg" alt="Pantalón3">
         <h3>Marca: CKlas</h3>
         <p>Precio: 600 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="3"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+        <button onclick="addToCart(15, 'CKlas', 600)">Agregar al carrito</button>
     </div>
+</section>
+
 
     <div class="producto">
         <img src="pantalon de mujer/pantalon5.jpeg" alt="Pantalón5">
         <h3>Marca: ShiFan</h3>
         <p>Precio: 550 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="5"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+               
+ <button onclick="addToCart(17, 'ShiFan', 550)">Agregar al carrito</button>
     </div>
 
 </section>
@@ -133,22 +120,15 @@
         <img src="Pantalon de hombre/pantalon1.jpg" alt="Pantalón GUNS AND BLUES">
         <h3>GUNS AND BLUES</h3>
         <p>Precio: 600 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="6"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+         <button onclick="addToCart(6, 'GUNS AND BLUES', 600)">Agregar al carrito</button>
     </div>
 
     <div class="producto">
         <img src="Pantalon de hombre/pantalon2.jpg" alt="Pantalón INTERBIEW JEANS">
         <h3>INTERBIEW JEANS</h3>
         <p>Precio: 550 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="7"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+      <button onclick="addToCart(7, 'INTERBIEW JEANS', 550)">Agregar al carrito</button>
+        
     </div>
 </section>
 
@@ -159,115 +139,82 @@
         <img src="camisa de mujer/blusa1.jpg" alt="Blusa1">
         <h3>Marca: Bella1010</h3>
         <p>Precio: 480 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="8"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+          <button onclick="addToCart(8, 'Bella1010', 480)">Agregar al carrito</button>
+       
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa2.jpg" alt="Blusa2">
         <h3>Marca: DYNE</h3>
         <p>Precio: 450 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="9"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+           <button onclick="addToCart(9, 'DYNE', 450)">Agregar al carrito</button>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa3.jpg" alt="Blusa3">
         <h3>Marca: BLUSA</h3>
         <p>Precio: 450 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="10"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+        <button onclick="addToCart(10, 'BLUSA', 450)">Agregar al carrito</button>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa4.jpg" alt="Blusa4">
         <h3>Marca: Chic Mi</h3>
         <p>Precio: 430 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="11"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+         <button onclick="addToCart(11, 'Chic Mi', 430)">Agregar al carrito</button>
     </div>
 
     <div class="producto">
         <img src="camisa de mujer/blusa5.jpg" alt="Blusa5">
         <h3>Marca: BLUSA</h3>
         <p>Precio: 380 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="12"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+        <button onclick="addToCart(12, 'BLUSA', 380)">Agregar al carrito</button>
     </div>
 
 </section>
 
 <section id="camisas-hombre">
     <h2>Camisas de Hombre</h2>
-    <div class="producto">
+   <!-- Camisa1 -->
+ <div class="producto">
         <img src="camisa de hombre/camisa1.jpg" alt="Camisa de Hombre">
-        <h3>Marca: LACOSTE</h3>
-        <p>Precio: 580 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="13"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
-    </div>
+    <p>Marca: LACOSTE</p>
+    <p>Precio: 580 LPS</p>
+    <button onclick="addToCart(1, 'LACOSTE', 580)">Agregar al carrito</button>
+</div>
 
-    <div class="producto">
+<!-- Camisa2 -->
+ <div class="producto">
         <img src="camisa de hombre/camisa2.jpg" alt="Camisa de Hombre">
-        <h3>Marca: Tommy</h3>
-        <p>Precio: 580 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="14"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
-    </div>
+    <p>Marca: Tommy</p>
+    <p>Precio: 580 LPS</p>
+    <button onclick="addToCart(2, 'Tommy', 580)">Agregar al carrito</button>
+</div>
 
-    <div class="producto">
+<!-- Camisa3 -->
+<div class="producto">
         <img src="camisa de hombre/camisa3.jpg" alt="Camisa de Hombre">
-        <h3>Marca: POLO</h3>
-        <p>Precio: 550 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="15"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
-    </div>
+    <p>Marca: POLO</p>
+    <p>Precio: 550 LPS</p>
+    <button onclick="addToCart(3, 'POLO', 550)">Agregar al carrito</button>
+</div>
 
-    <div class="producto">
+<!-- Camisa4 -->
+<div class="producto">
         <img src="camisa de hombre/camisa4.jpg" alt="Camisa de Hombre">
-        <h3>Marca: POLO</h3>
-        <p>Precio: 500 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="16"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
-    </div>
+    <p>Marca: POLO</p>
+    <p>Precio: 500 LPS</p>
+    <button onclick="addToCart(4, 'POLO', 500)">Agregar al carrito</button>
+</div>
 
-    <div class="producto">
+<!-- Camisa5 -->
+<div class="producto">
         <img src="camisa de hombre/camisa5.jpg" alt="Camisa de Hombre">
         <h3>Marca: Tommy</h3>
         <p>Precio: 520 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="17"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
-    </div>
+    <button onclick="addToCart(5, 'Tommy', 520)">Agregar al carrito</button>
+</div>
+
 
 </section>
 
@@ -281,11 +228,8 @@
     <div class="producto">
         <img src="sitio de niño/img1.jpg" alt="Imagen 1">
         <p>Precio: 650 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="1"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
-        </form>
+         <button onclick="addToCart(1, 'Producto Niños 1', 650)">Agregar al carrito</button>
+        
     </div>
 
     <div class="producto">
