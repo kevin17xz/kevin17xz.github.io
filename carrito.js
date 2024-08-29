@@ -105,7 +105,29 @@ function renderCartItems() {
         `;
         cartItems.appendChild(tr);
     }
-}
+} 
+// Función para finalizar la compra
+function finalizarCompra() {
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    const shippingEstimation = document.getElementById('shipping-estimation').value;
+
+    // Validar que todos los campos estén completos
+    if (!email || !telefono) {
+        alert("Por favor, complete todos los campos.");
+        return;
+    }
+
+    const purchaseData = {
+        cartData: cartData,
+        email: email,
+        telefono: telefono,
+        shippingEstimation: shippingEstimation
+    };
+
+    // Mostrar una alerta con los datos de la compra
+    alert(`Compra finalizada!\nDatos:\nCorreo: ${email}\nTeléfono: ${telefono}\nEstimación de envío: ${shippingEstimation}\nTotal: ${document.getElementById('total-price').textContent}`);
+    
 
 // Evento para enviar el formulario de pago
 checkoutForm.addEventListener("submit", (event) => {
