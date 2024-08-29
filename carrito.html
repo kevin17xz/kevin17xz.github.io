@@ -7,7 +7,14 @@
     <!-- Enlazar a tu archivo CSS del carrito -->
     <link rel="stylesheet" href="../carrito.css"> 
 </head>
-<body>
+<body> 
+    <!-- Agregar botón para agregar producto al carrito -->
+    <div class="product-buttons">
+        <button onclick="addToCart(1)">Agregar Producto 1 al carrito</button>
+        <!-- Puedes agregar más botones para otros productos -->
+        <!-- <button onclick="addToCart(2)">Agregar Producto 2 al carrito</button> -->
+    </div>
+
     <div class="container">
         <h2>Tu carrito de compras</h2>
 
@@ -23,32 +30,30 @@
             <tbody id="cart-items"></tbody>
         </table>
 
-        <!-- Sección de pago -->
-        <div class="payment-options">
-            <h3>Opciones de pago:</h3>
-            <p>Diversas formas de pago, incluyendo tarjetas de crédito y débito.</p>
+        <div class="total-price">
+            <span>Total del carrito:</span>
+            <span id="total-price">$0.00</span>
         </div>
 
-        <!-- Botones de compra y checkout -->
         <div class="buttons">
-            <button class="buy-btn">Finalizar compra</button>
+            <button class="buy-btn" onclick="finalizarCompra()">Finalizar compra</button>
             <a href="#" class="checkout-btn">Proceder al pago</a>
         </div>
 
         <!-- Sección de información de contacto -->
         <h3>Información de contacto:</h3>
-        <form action="">
-            <label for="email">Storechic@gmail.com</label>
-            <input type="email" id="email">
+        <form id="checkout-form">
+            <label for="email">Gmail:</label>
+            <input type="email" id="email" required>
             <br>
-            <label for="telefono">504-5352-5245:</label>
-            <input type="tel" id="telefono">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" required>
         </form>
 
         <!-- Información de envío -->
         <div class="shipping-info">
             <h3>Información de envío:</h3>
-            <p>Su pedido llegara en 3 Dias...</p>
+            <input type="text" id="shipping-estimation" readonly>
         </div>
 
     </div>

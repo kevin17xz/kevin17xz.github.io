@@ -37,14 +37,14 @@ th {
     color: green;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
-}
-
 .buttons {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
 }
