@@ -1,24 +1,19 @@
+// Inicializar variables
+let cartData = []; // Datos del carrito
+const discountPercentage = 0.1; // 10% de descuento
+const taxRate = 0.15; // 15% de impuesto
+
 // Obtener elementos del DOM
 const cartItems = document.querySelector("#cart-items");
 const totalPrice = document.querySelector("#total-price");
 const checkoutForm = document.querySelector("#checkout-form");
 const shippingEstimationInput = document.querySelector("#shipping-estimation");
 
-// Inicializar variables
-// Datos de ejemplo para el carrito, puedes modificar esto según tu lógica
-let cartData = [];
-const discountPercentage = 0.1; // 10% de descuento
-const taxRate = 0.15; // 15% de impuesto
-const cartItems = document.getElementById('cart-items');
-const totalPrice = document.getElementById('total-price');
-const checkoutForm = document.getElementById('checkout-form');
-const shippingEstimationInput = document.getElementById('shipping-estimation');
-
 // Función para agregar un producto al carrito
 function addToCart(productId, name, price) {
     // Verificar si el producto ya está en el carrito
     const existingProduct = cartData.find(item => item.productId === productId);
-    if (existingProduct) 
+    if (existingProduct) {
         existingProduct.quantity += 1;
     } else {
         // Agregar nuevo producto al carrito
