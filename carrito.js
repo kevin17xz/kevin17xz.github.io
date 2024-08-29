@@ -10,6 +10,7 @@ const checkoutForm = document.querySelector("#checkout-form");
 const shippingEstimationInput = document.querySelector("#shipping-estimation");
 
 // Función para agregar un producto al carrito
+// Función para agregar un producto al carrito
 function addToCart(productId, name, price) {
     // Verificar si el producto ya está en el carrito
     const existingProduct = cartData.find(item => item.productId === productId);
@@ -78,9 +79,10 @@ function recalculateTotal() {
 }
 
 // Función para renderizar los productos en el carrito
+// Función para renderizar los productos en el carrito
 function renderCartItems() {
-    cartItems.innerHTML = "";
-    for (const item of cartData) {
+    cartItems.innerHTML = ""; // Limpiar el carrito antes de renderizar
+    cartData.forEach(item => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
             <td>${item.name}</td>
@@ -90,7 +92,7 @@ function renderCartItems() {
             <td><button onclick="deleteItem(${item.productId})">Eliminar</button></td>
         `;
         cartItems.appendChild(tr);
-    }
+    });
 }
 
 // Función para finalizar la compra
