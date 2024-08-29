@@ -15,19 +15,10 @@ const checkoutForm = document.getElementById('checkout-form');
 const shippingEstimationInput = document.getElementById('shipping-estimation');
 
 // Función para agregar un producto al carrito
-function addToCart(productId) {
-    // Información del producto
-    const productInfoById = {
-        1: { name: "Guess Jeans", price: 530 },
-        2: { name: "Magenda", price: 550 },
-        3: { name: "CKlas", price: 600 },
-    };
-    
-    const productInfo = productInfoById[productId];
-    
+function addToCart(productId, name, price) {
     // Verificar si el producto ya está en el carrito
     const existingProduct = cartData.find(item => item.productId === productId);
-    if (existingProduct) {
+    if (existingProduct) 
         existingProduct.quantity += 1;
     } else {
         // Agregar nuevo producto al carrito
