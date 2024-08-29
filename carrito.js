@@ -5,7 +5,7 @@ const taxRate = 0.15; // 15% de impuesto
 
 // Obtener elementos del DOM
 const cartItems = document.querySelector("#cart-items");
-const totalPrice = document.querySelector("#total-price-display"); // Cambio aquí
+const totalPrice = document.querySelector("#total-price-display");
 const checkoutForm = document.querySelector("#checkout-form");
 const shippingEstimationInput = document.querySelector("#shipping-estimation");
 
@@ -91,7 +91,7 @@ function renderCartItems() {
         `;
         cartItems.appendChild(tr);
     }
-} 
+}
 
 // Función para finalizar la compra
 function finalizarCompra() {
@@ -113,7 +113,7 @@ function finalizarCompra() {
     };
 
     // Mostrar una alerta con los datos de la compra
-    alert(`Compra finalizada!\nDatos:\nCorreo: ${email}\nTeléfono: ${telefono}\nEstimación de envío: ${shippingEstimation}\nTotal: ${document.querySelector('#total-price-display').textContent}`);
+    alert(`Compra finalizada!\nDatos:\nCorreo: ${email}\nTeléfono: ${telefono}\nEstimación de envío: ${shippingEstimation}\nTotal: ${totalPrice.textContent}`);
 }
 
 // Evento para enviar el formulario de pago
@@ -126,7 +126,7 @@ checkoutForm.addEventListener("submit", (event) => {
     // Aquí puedes agregar lógica adicional para procesar el pago, guardar en la base de datos, etc.
 });
 
-// Cargar los productos en el carrito desde la base de datos (sustituye esto con su propia lógica)
+// Datos iniciales para el carrito (puedes eliminar esto o reemplazarlo con datos reales)
 cartData = [
     { productId: 1, name: "Guess Jeans", quantity: 2, price: 530 },
     { productId: 2, name: "Magenda", quantity: 3, price: 550 },

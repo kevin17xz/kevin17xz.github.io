@@ -7,13 +7,17 @@
     <!-- Enlazar a tu archivo CSS del carrito -->
     <link rel="stylesheet" href="../carrito.css"> 
 </head>
-<body> 
+<body>  
+    <div>
+    <input type="text" id="search-input" placeholder="Buscar productos..." onkeyup="filterProducts()">
+</div>
     <!-- Agregar botón para agregar producto al carrito -->
-    <div class="product-buttons">
-        <button onclick="addToCart(1, 'Guess Jeans', 530)">Agregar Producto 1 al carrito</button>
-        <!-- Puedes agregar más botones para otros productos -->
-        <!-- <button onclick="addToCart(2, 'Magenda', 550)">Agregar Producto 2 al carrito</button> -->
-    </div>
+ <div class="product-buttons">
+    <button onclick="addToCart(1, 'Guess Jeans', 530)">Agregar Guess Jeans al carrito</button>
+    <button onclick="addToCart(2, 'Magenda', 550)">Agregar Magenda al carrito</button>
+    <!-- Agrega más botones para otros productos según sea necesario -->
+</div>
+
 
     <div class="container">
         <h2>Tu carrito de compras</h2>
