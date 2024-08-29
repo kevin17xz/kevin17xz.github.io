@@ -5,20 +5,24 @@ const checkoutForm = document.querySelector("#checkout-form");
 const shippingEstimationInput = document.querySelector("#shipping-estimation");
 
 // Inicializar variables
-let cartData = []; // Arreglo para almacenar los productos en el carrito
-
-// Definir variables de promociones, descuentos, y el impuesto
-const discountPercentage = 0.10; // Descuento del 10%
-const taxRate = 0.15; // Impuesto del 15%
+// Datos de ejemplo para el carrito, puedes modificar esto según tu lógica
+let cartData = [];
+const discountPercentage = 0.1; // 10% de descuento
+const taxRate = 0.15; // 15% de impuesto
+const cartItems = document.getElementById('cart-items');
+const totalPrice = document.getElementById('total-price');
+const checkoutForm = document.getElementById('checkout-form');
+const shippingEstimationInput = document.getElementById('shipping-estimation');
 
 // Función para agregar un producto al carrito
 function addToCart(productId) {
-    // Obtener información del producto a agregar al carrito (sustituye esto con tu propia lógica de base de datos)
+    // Información del producto
     const productInfoById = {
         1: { name: "Guess Jeans", price: 530 },
         2: { name: "Magenda", price: 550 },
         3: { name: "CKlas", price: 600 },
     };
+    
     const productInfo = productInfoById[productId];
     
     // Verificar si el producto ya está en el carrito
@@ -54,6 +58,10 @@ function updateQuantity(productId, quantity) {
     const product = cartData.find(item => item.productId === productId);
     if (product) {
         product.quantity = parseInt(quantity);
+        if (product.quantity <= 0) {
+            deleteItem(productId);
+            return;
+        }
     }
 
     // Recalcular el total del carrito

@@ -235,10 +235,7 @@
     <div class="producto">
         <img src="sitio de niño/img2.jfif" alt="Imagen 2">
         <p>Precio: 455 LPS</p>
-        <form method="POST" action="comprar.php" onsubmit="return confirm('¿Estás seguro de que quieres comprar esta prenda?');">
-            <input type="hidden" name="productoId" value="2"> <!-- ID único del producto -->
-            <input type="number" name="cantidad" min="1" max="10" value="1">
-            <button type="submit" class="btn btn-primary btn-comprar">Comprar</button>
+        <button onclick="addToCart(2, 'Producto Niños 1', 650)">Agregar al carrito</button>
         </form>
     </div>
 
