@@ -15,22 +15,7 @@ const checkoutForm = document.getElementById('checkout-form');
 const shippingEstimationInput = document.getElementById('shipping-estimation');
 
 // Función para agregar un producto al carrito
-function addToCart(productId, name, price) {
-    // Verificar si el producto ya está en el carrito
-    const existingProduct = cartData.find(item => item.productId === productId);
-    if (existingProduct) 
-        existingProduct.quantity += 1;
-    } else {
-        // Agregar nuevo producto al carrito
-        cartData.push({ productId, name, quantity: 1, price });
-    }
 
-    // Recalcular el total del carrito
-    recalculateTotal();
-
-    // Renderizar nuevamente los productos en el carrito
-    renderCartItems();
-}
 
 // Función para eliminar un producto del carrito
 function deleteItem(productId) {
