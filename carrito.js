@@ -22,7 +22,7 @@ function addToCart(productId, name, price) {
         existingProduct.quantity += 1;
     } else {
         // Agregar nuevo producto al carrito
-        cartData.push({ productId, name: productInfo.name, quantity: 1, price: productInfo.price });
+        cartData.push({ productId, name, quantity: 1, price });
     }
 
     // Recalcular el total del carrito
