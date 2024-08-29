@@ -5,7 +5,7 @@ const taxRate = 0.15; // 15% de impuesto
 
 // Obtener elementos del DOM
 const cartItems = document.querySelector("#cart-items");
-const totalPrice = document.querySelector("#total-price");
+const totalPrice = document.querySelector("#total-price-display"); // Cambio aquí
 const checkoutForm = document.querySelector("#checkout-form");
 const shippingEstimationInput = document.querySelector("#shipping-estimation");
 
@@ -92,6 +92,7 @@ function renderCartItems() {
         cartItems.appendChild(tr);
     }
 } 
+
 // Función para finalizar la compra
 function finalizarCompra() {
     const email = document.getElementById('email').value;
@@ -112,8 +113,8 @@ function finalizarCompra() {
     };
 
     // Mostrar una alerta con los datos de la compra
-    alert(`Compra finalizada!\nDatos:\nCorreo: ${email}\nTeléfono: ${telefono}\nEstimación de envío: ${shippingEstimation}\nTotal: ${document.getElementById('total-price').textContent}`);
-    
+    alert(`Compra finalizada!\nDatos:\nCorreo: ${email}\nTeléfono: ${telefono}\nEstimación de envío: ${shippingEstimation}\nTotal: ${document.querySelector('#total-price-display').textContent}`);
+}
 
 // Evento para enviar el formulario de pago
 checkoutForm.addEventListener("submit", (event) => {
